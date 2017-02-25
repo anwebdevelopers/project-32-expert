@@ -1,0 +1,173 @@
+.advantage-page {
+    padding: 50px 0 0 0;
+}
+
+.advantage-page__wrapper {
+    @extend .container;
+}
+
+.advantage-page__title {
+    margin: 40px 0 0 0;
+    font-family: 'Bebas Neue';
+	font-weight: 600;
+    text-align: center;
+    h1,h2,h3 {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 0 0 20px;
+        margin: 0;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            background-color: $orange;
+        }
+    }
+}
+
+.advantage-page__content {
+    @extend .clearfix;
+    margin: 40px 0 0 0;
+}
+.advantage-page__content-text {
+    font-size: 16px;
+    line-height: 1.2;
+    p {
+        margin: 10px 0;
+    }
+}
+.advantage-page__content-img {
+    img {
+        float: right;
+        margin: 0 0 20px 20px;
+        display: inline-block;
+        vertical-align: top;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.advantage-page__doc {
+    margin: 10px 0 0 0;
+    font-size: 0;
+}
+.advantage-page__doc-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding: 0 30px 0 0;
+    margin: 20px 0 0 0;
+}
+.advantage-page__doc-title {
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+}
+.advantage-page__doc-link {
+    margin: 20px 0 0 0;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 500;
+    a {
+        position: relative;
+        display: block;
+        min-height: 47px;
+        padding: 0 0 0 60px;
+        text-decoration: none;
+        color: $fc;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: url(../img/sprites.png) no-repeat;
+        }
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: $orange;
+        }
+    }
+}
+
+.advantage-page__doc-link_pdf {
+    a {
+        &:before {
+            background-position: 0 -96px ;
+        	width: 44px;
+        	height: 47px;
+        }
+    }
+}
+.advantage-page__doc-link_doc {
+    a {
+        &:before {
+            background-position: 0 -152px ;
+        	width: 47px;
+        	height: 47px;
+        }
+    }
+}
+
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .advantage-page__content-text {
+        font-size: 14px;
+    }
+    .advantage-page__doc-item {
+        display: block;
+        width: auto;
+    }
+    .advantage-page__doc-title {
+        font-size: 18px;
+    }
+    .advantage-page__doc-link {
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width : 480px) {
+    .advantage-page__title {
+        text-align: left;
+        h1,h2,h3 {
+            display: block;
+            font-size: 20px;
+            &:before {
+                top: 2px;
+            }
+        }
+    }
+    .advantage-page__content-img {
+
+        text-align: center;
+        img {
+            float: none;
+            margin: 20px 0;
+        }
+    }
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}

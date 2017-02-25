@@ -1,0 +1,405 @@
+.contacts {
+    padding: 50px 0 0 0;
+}
+.contacts__wrapper {
+    @extend .container;
+
+}
+.contacts__bg-box {
+    margin: 40px 0 0 0;
+    background-color: $green;
+    padding: 45px 0;
+}
+.contacts__content {
+    @extend .clearfix;
+    position: relative;
+}
+.contacts__item-box {
+    float: left;
+    width: 32%;
+}
+.contacts__item {
+    margin: 0 0 30px 0;
+}
+.contacts__item:last-child {
+    margin: 0;
+}
+.contacts__item-title {
+    font-size: 20px;
+    font-family: 'Bebas Neue';
+    font-weight: 600;
+    color: $orange;
+    line-height: 1;
+}
+.contacts__item-link {
+    margin: 5px 0 0 0;
+    font-size: 20px;
+    font-family: 'Bebas Neue';
+    font-weight: 600;
+    line-height: 1;
+    a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: lighten($orange, 20%);
+        }
+    }
+}
+.contacts__item-link_underline {
+    a {
+        text-decoration: underline;
+    }
+}
+.contacts__item-text {
+    margin: 5px 0 0 0;
+    font-size: 20px;
+    font-family: 'Bebas Neue';
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    address {
+        font-style: normal;
+    }
+}
+
+.contacts__map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 36%;
+    border: 5px solid $orange;
+    background-color: #fff;
+}
+.crm {
+    margin: 20px 0 0 0;
+    padding: 30px 0 50px 0;
+    background-color: $gray;
+}
+.crm__wrapper {
+    @extend .container;
+}
+.crm__content {
+    max-width: 470px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.crm__title {
+    font-family: 'Bebas Neue';
+    font-weight: 600;
+    color: $orange;
+    h2 {
+        margin: 0;
+        font-size: 20px;
+        line-height: 1;
+    }
+}
+.crm__link {
+    margin: 20px 0 0 0;
+    font-size: 18px;
+    line-height: 1.2;
+    a {
+        color: $fc;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: lighten($orange, 20%);
+        }
+    }
+}
+.crm__text {
+    margin: 15px 0 0 0;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #69747c;
+    p {
+        margin: 0;
+    }
+}
+
+.write-us {
+    padding: 50px 0 0 0;
+}
+.write-us__wrapper {
+    @extend .container;
+}
+.write-us__form {
+    max-width: 470px;
+    margin: 40px auto 0 auto;
+}
+.write-us__input {
+    float: left;
+    display: block;
+    width: 48%;
+    input {
+        display: block;
+        width: 100%;
+        height: 30px;
+        padding: 0 10px;
+        line-height: 28px;
+        border: 1px solid $tc;
+        background-color: transparent;
+        border-radius: 3px;
+        font-size: 16px;
+        font-family: 'Bebas Neue';
+        font-weight: 600;
+        text-align: center;
+        color: #69747c;
+        outline: none;
+        box-shadow: none;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            border-color: $orange;
+        }
+        &:focus::-webkit-input-placeholder {color: transparent}
+        &:focus::-moz-placeholder {color: transparent}
+        &:focus:-moz-placeholder {color: transparent}
+        &:focus:-ms-input-placeholder {color: transparent}
+    }
+    .error {
+        border-color: #fa8f8f;
+        background-color: #f8c3c3;
+        &:hover, &:active, &:focus {
+            border-color: #fa8f8f;
+        }
+    }
+}
+.write-us__input:first-child {
+    margin: 0 4% 0 0;
+}
+.write-us__text {
+    clear: both;
+    padding: 15px 0 0 0;
+    textarea {
+        display: block;
+        width: 100%;
+        min-height: 190px;
+        padding: 10px;
+        line-height: 1.2;
+        border: 1px solid $tc;
+        border-radius: 3px;
+        font-size: 16px;
+        color: #69747c;
+        outline: none;
+        box-shadow: none;
+        resize: vertical;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            border-color: $orange;
+        }
+        &:focus::-webkit-input-placeholder {color: transparent}
+        &:focus::-moz-placeholder {color: transparent}
+        &:focus:-moz-placeholder {color: transparent}
+        &:focus:-ms-input-placeholder {color: transparent}
+    }
+}
+.write-us__submit {
+    margin: 20px 0 0 0;
+    button {
+        @include btn;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px 10px 8px 10px;
+        text-decoration: none;
+        color: #fff;
+        background-color: $orange;
+        text-align: center;
+        font-size: 20px;
+        text-transform: uppercase;
+        line-height: 1;
+        font-weight: 600;
+        text-decoration: none;
+        font-family: 'Bebas Neue';
+        border-radius: 5px;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            background-color: darken($orange, 10%);
+        }
+    }
+}
+.write-us__error {
+    margin: 15px 0 0 0;
+    font-size: 20px;
+    font-family: 'Bebas Neue';
+    font-weight: 600;
+    text-align: center;
+    color: #e02e05;
+    line-height: 1;
+}
+.callback {
+    position: relative;
+    padding: 50px 30px 30px 30px;
+    background-color: #fff;
+    max-width: 420px;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+.callback__title {
+    font-size: 20px;
+    font-family: 'Bebas Neue';
+    font-weight: 600;
+    text-align: center;
+    color: $tc;
+    line-height: 1;
+}
+.callback__form {
+    margin: 20px 0 0 0;
+}
+.callback__input {
+    display: block;
+    input {
+        display: block;
+        width: 100%;
+        height: 30px;
+        padding: 0 10px;
+        line-height: 28px;
+        border: 1px solid $tc;
+        background-color: transparent;
+        border-radius: 3px;
+        font-size: 16px;
+        color: #69747c;
+        outline: none;
+        box-shadow: none;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            border-color: $orange;
+        }
+        &:focus::-webkit-input-placeholder {color: transparent}
+        &:focus::-moz-placeholder {color: transparent}
+        &:focus:-moz-placeholder {color: transparent}
+        &:focus:-ms-input-placeholder {color: transparent}
+    }
+    .error {
+        border-color: #fa8f8f;
+        background-color: #f8c3c3;
+        &:hover, &:active, &:focus {
+            border-color: #fa8f8f;
+        }
+    }
+}
+.callback__input:not(:first-child) {
+    margin: 10px 0 0 0;
+}
+.callback__text {
+    clear: both;
+    padding: 10px 0 0 0;
+    textarea {
+        display: block;
+        width: 100%;
+        min-height: 140px;
+        padding: 10px;
+        line-height: 1.2;
+        border: 1px solid $tc;
+        border-radius: 3px;
+        font-size: 16px;
+        color: #69747c;
+        outline: none;
+        box-shadow: none;
+        resize: vertical;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            border-color: $orange;
+        }
+        &:focus::-webkit-input-placeholder {color: transparent}
+        &:focus::-moz-placeholder {color: transparent}
+        &:focus:-moz-placeholder {color: transparent}
+        &:focus:-ms-input-placeholder {color: transparent}
+    }
+}
+.callback__submit {
+    margin: 10px 0 0 0;
+    button {
+        @include btn;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px 10px 8px 10px;
+        text-decoration: none;
+        color: #fff;
+        background-color: $orange;
+        text-align: center;
+        font-size: 20px;
+        text-transform: uppercase;
+        line-height: 1;
+        font-weight: 600;
+        text-decoration: none;
+        font-family: 'Bebas Neue';
+        border-radius: 5px;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            background-color: darken($orange, 10%);
+        }
+    }
+}
+.callback__error {
+    margin: 15px 0 0 0;
+    font-size: 16px;
+    font-family: 'Bebas Neue';
+    font-weight: 600;
+    text-align: center;
+    color: #e02e05;
+    line-height: 1;
+}
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .contacts__item-box {
+        float: none;
+        width: auto;
+    }
+    .contacts__map {
+        position: static;
+        height: 300px;
+        margin: 40px 0 0 0;
+    }
+    .contacts__item-box {
+        font-size: 0;
+    }
+    .contacts__item {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+    }
+    .contacts__item:nth-child(2n+1) {
+        padding: 0 20px 0 0;
+    }
+
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .contacts__item {
+        display: block;
+        width: auto;;
+    }
+    .contacts__item:nth-child(2n+1) {
+        padding: 0;
+    }
+    .write-us__input:first-child {
+        margin: 0;
+    }
+    .write-us__input {
+        float: none;;
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+    .callback {
+        padding: 50px 20px 30px 20px;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}

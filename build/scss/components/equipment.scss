@@ -1,0 +1,53 @@
+.equipment {
+    padding: 50px 0 0 0;
+}
+.equipment__wrapper {
+    @extend .container;
+}
+.equipment__img {
+    position: relative;
+    margin: 40px 0 0 0;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: url(../img/sprites.png) no-repeat;
+        background-position: 0 0;
+    	width: 42px;
+    	height: 42px;
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .equipment__img {
+        &:before {
+            display: block;
+        }
+    }
+}
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}

@@ -1,0 +1,363 @@
+.header {
+    position: relative;
+    z-index: 10;
+    padding: 12px 0 7px 0;
+    background-color: $gray;
+}
+
+.header__wrapper {
+    @extend .container;
+    @extend .clearfix;
+}
+.header__logo {
+    float: left;
+    margin-bottom: -20px;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.header__nav-btn-open {
+    position: relative;
+	float: right;
+	display: none;
+	width: 30px;
+	height: 30px;
+    margin: 20px 0 0 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	transition: all .5s ease;
+	span {
+		position: absolute;
+		top: 10px;
+		left: 0;
+		display: block;
+		width: 30px;
+		height: 4px;
+		background-color: $tc;
+		transition: all .5s ease;
+	}
+	&:before,&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		display: block;
+		width: 30px;
+		height: 4px;
+		background-color: $tc;
+		transition: all .5s ease;
+	}
+	&:before {
+		top: 0;
+	}
+	&:after {
+		top: 20px;
+	}
+	&:hover, &:active {
+		color: #fff;
+		span, &:before, &:after {
+			background-color: $orange;
+		}
+	}
+}
+.header__box {
+
+}
+.header__box-inner {
+    text-align: right;
+}
+.header__nav {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px 0 0 0;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 5px;
+            a {
+                display: block;
+                padding: 7px 12px 5px 12px;
+                line-height: 1;
+                text-decoration: none;
+                font-size: 20px;
+                font-family: 'Bebas Neue';
+                font-weight: 600;
+                color: #fff;
+                background-color: #69757d;
+                border-radius: 5px;
+                transition: all .5s ease;
+                &:hover, &:active, &:focus {
+                    background-color: $orange;
+                }
+            }
+            .active {
+                background-color: $orange;
+            }
+        }
+    }
+}
+.header__nav-btn-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    @include btn;
+	width: 24px;
+	height: 24px;
+    display: none;
+    color: #fff;
+    transition: all .5s ease;
+    &:hover, &:active, &:focus {
+        color: $orange;
+    }
+}
+.header__link-tomap {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 30px;
+    text-align: left;
+    a {
+        position: relative;
+        display: block;
+        max-width: 120px;
+        padding: 0 0 0 50px;
+        color: $tc;
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 600;
+        text-decoration: none;
+        font-family: 'Bebas Neue';
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: $orange;
+            &:before {
+                animation: rotate .3s ease;
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -1px;
+            width: 38px;
+            height: 38px;
+            background-image: url(../img/sprites.png);
+            background-repeat: no-repeat;
+            background-position: 0 -49px ;
+        }
+    }
+}
+.header__link-tomap_show-mobile {
+    display: none;
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.header__contacts {
+    display: inline-block;
+    vertical-align: middle;
+    margin:  0 0 0 30px;
+}
+.header__contacts-links {
+    a {
+        display: block;
+        text-decoration: none;
+        color: $tc;
+        font-size: 22px;
+        line-height: 1.1;
+        font-weight: 600;
+        text-decoration: none;
+        font-family: 'Bebas Neue';
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: $orange;
+        }
+    }
+}
+.header__contacts-button {
+    margin: 5px 0 0 0;
+    a {
+        display: block;
+        padding: 6px 10px 4px 10px;
+        text-decoration: none;
+        color: #fff;
+        background-color: $green;
+        text-align: center;
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height: 1;
+        font-weight: 600;
+        text-decoration: none;
+        font-family: 'Bebas Neue';
+        border-radius: 5px;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            background-color: $orange;
+        }
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+    .container {
+        max-width: 768px;
+    }
+    .header__logo {
+        max-width: 120px;
+    }
+
+    .header__nav {
+        margin: 0;
+    }
+    .header__contacts, .header__link-tomap {
+        margin: 0 0 0 15px;
+    }
+    .header__link-tomap {
+        a {
+            max-width: 70px;
+            padding: 0;
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width : 768px) {
+    .header__nav-btn-open {
+        display: block;
+    }
+
+    .header__box {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        overflow: hidden;
+        display: none;
+    }
+    .header__box_show {
+    	overflow-y: auto;
+    	display: block;
+        background-color: transparentize(#69757d, .5);
+    }
+    .header__box-inner {
+    	position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        min-height: 100%;
+        width: 100%;
+        max-width: 290px;
+        background-color: #69757d;
+        padding: 35px 20px;
+        transform: translate(100%, 0);
+        transition: transform .3s ease-out;
+        text-align: left;
+        .header__link-tomap {
+            display: none;
+        }
+    }
+    .header__box-inner_show {
+    	transform: translate(0, 0);
+    }
+    .header__nav-btn-close {
+        display: block;
+    }
+    .header__nav {
+        display: block;
+        margin: 20px 0 0 0;
+        ul {
+            li {
+                display: block;
+                margin: 0;
+                a {
+                    display: inline-block;
+                    vertical-align: top;
+                    padding: 7px 0 5px;
+                    &:hover, &:active, &:focus {
+                        background-color: #69757d;
+                        color: $orange;
+                    }
+                }
+                .active {
+                    background-color: #69757d;
+                    color: $orange;
+                }
+            }
+        }
+    }
+    .header__link-tomap_show-mobile {
+        display: block;
+        float: right;
+        margin: 18px 35px 0 0;
+        a {
+            max-width: 60px;
+            font-size: 16px;
+        }
+    }
+    .header__contacts {
+        margin: 30px 0 0 0;
+        text-align: left;
+    }
+    .header__contacts-links {
+        a {
+            color: #fff;
+        }
+    }
+    .header__contacts-button {
+        margin: 15px 0 0 0;
+        a {
+            background-color: transparent;
+            border: 1px solid #fff;
+        }
+    }
+
+}
+
+@media only screen and (max-width : 480px) {
+    .title {
+        h1,h2,h3 {
+            max-width: 180px;
+            font-size: 24px;
+        }
+    }
+    .header__logo {
+        max-width: 85px;
+    }
+    .header__link-tomap_show-mobile {
+        margin: 8px 35px 0 0;
+    }
+    .header__nav-btn-open {
+        width: 26px;
+        height: 20px;
+        margin: 10px 0 0;
+        span, &:before, &:after {
+            width: 26px;
+        }
+        &:before {
+    		top: 1px;
+    	}
+    	&:after {
+    		top: 19px;
+    	}
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}

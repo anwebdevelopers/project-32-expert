@@ -1,0 +1,134 @@
+@import "bourbon";
+@import "components/vars.scss";
+@import "components/normalize.scss";
+@import "components/fonts.scss";
+
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: #666;
+}
+body input:required:valid,
+body textarea:required:valid {
+	color: #666;
+}
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.5;
+	font-family: Calibri, sans-serif;
+	color: #2c3e50;
+	background-color: #fff;
+}
+.container {
+	max-width: 992px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+a {
+	outline: none !important;
+}
+.title {
+	position: relative;
+	background-color: #fff;
+	text-align: center;
+	font-family: 'Bebas Neue';
+	font-weight: 600;
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 50%;
+		transform: translateY(-60%);
+		height: 13px;
+		background-color: $gray;
+	}
+	h1,h2,h3 {
+		position: relative;
+		z-index: 1;
+		display: inline-block;
+		vertical-align: top;
+		max-width: 320px;
+		width: 100%;
+		padding: 0 10px;
+		margin: 0;
+		background-color: #fff;
+		font-size: 30px;
+		line-height: 1;
+	}
+}
+.undertitle {
+	margin: 25px 0 0 0;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+	color: $orange;
+	line-height: 1.1;
+	span {
+		display: inline-block;
+		vertical-align: top;
+		max-width: 390px;
+	}
+}
+
+
+//Custom Styles Here
+@import "components/header.scss";
+@import "components/advantages.scss";
+@import "components/about.scss";
+@import "components/services.scss";
+@import "components/equipment.scss";
+@import "components/parthners.scss";
+@import "components/footer.scss";
+@import "components/advantage-page.scss";
+@import "components/news.scss";
+@import "components/contacts.scss";
+
+
+//@import "build/scss/components/magnific-popup.scss";
+
+//ALWAYS END
+@import "components/media.scss";
+
+//Load Libs SASS
+//@import "html/libs/animate/animate.sass";
+@import "html/libs/owl.carousel/dist/assets/owl.carousel.min";
+//@import "html/libs/superfish/dist/css/superfish";
+//@import "html/libs/font-awesome/scss/font-awesome.scss";
+//@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
+@import "components/magnific-popup.scss";
+@import "html/libs/magnific-popup/dist/magnific-popup";

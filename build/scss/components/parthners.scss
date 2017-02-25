@@ -1,0 +1,102 @@
+.parthners {
+    padding: 50px 0 0 0;
+}
+.parthners__wrapper {
+    @extend .container;
+}
+.parthners__slider.owl-carousel {
+    margin: 40px 0 0 0;
+    padding: 0 100px;
+    .owl-nav {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        .owl-prev, .owl-next {
+            position: absolute;
+            top: 0;
+            width: 45px;
+            height: 45px;
+            line-height: 38px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            text-align: center;
+            transform: translateY(-50%);
+            transition: all .5s ease;
+            &:before {
+                display: inline-block;
+                vertical-align: middle;
+                width: 13px;
+            	height: 21px;
+                line-height: 22px;
+                font-size: 22px;
+                font-family: "fontello";
+                font-style: normal;
+                font-weight: normal;
+                speak: none;
+                text-decoration: inherit;
+                font-variant: normal;
+                text-transform: none;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+            &:hover, &:active, &:focus {
+                border-color: $orange;
+                color: $orange;
+            }
+        }
+        .owl-prev {
+            left: 0;
+            &:before {
+                content: '\e800';
+                margin-right: 5px;
+            }
+        }
+        .owl-next {
+            right: 0;
+            &:before {
+                content: '\e801';
+                margin-left: 5px;
+            }
+        }
+    }
+    .parthners__slider-item {
+        text-align: center;
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+    .parthners__slider.owl-carousel {
+        margin: 40px 0 0;
+        padding: 0 60px;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+@media only screen and (max-width : 640px) {
+    .parthners {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}

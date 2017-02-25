@@ -1,0 +1,143 @@
+.news {
+    padding: 50px 0 0 0;
+}
+
+.news__wrapper {
+    @extend .container;
+}
+
+.news__content {
+    margin: 40px 0 0 0;
+}
+.news__item {
+    @extend .clearfix;
+    margin: 0 0 20px 0;
+}
+.news__item-img {
+    img {
+        float: right;
+        margin: 0 0 20px 20px;
+        display: inline-block;
+        vertical-align: top;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.news__item-date {
+    font-family: 'Bebas Neue';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1;
+    color: $orange;
+}
+.news__item-title {
+    margin: 15px 0;
+    font-family: 'Bliss Pro';
+    color: $tc;
+    h3 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1;
+    }
+}
+.news__item-text {
+    margin: 15px 0;
+    font-size: 16px;
+    line-height: 1.2;
+    p {
+        margin: 15px 0;
+    }
+}
+.news__item-link {
+    text-align: right;
+    margin: 15px 0;
+    font-size: 18px;
+    line-height: 1.2;
+    font-family: 'Bliss Pro';
+    a {
+        color: $fc;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: $orange;
+        }
+    }
+}
+.news__item_detail {
+    .news__item-title {
+        text-transform: uppercase;
+    }
+    .news__item-link {
+        text-align: left;
+    }
+}
+.news__pagination {
+    margin: 40px 0 0 0;
+    text-align: center;
+    a {
+        display: inline-block;
+        vertical-align: top;
+        width: 30px;
+        height: 30px;
+        line-height: 32px;
+        border-radius: 5px;
+        font-family: 'Bebas Neue';
+        font-weight: 600;
+        font-size: 24px;
+        text-decoration: none;
+        color: $fc;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: $orange;
+        }
+    }
+    .active {
+        background-color: $orange;
+        color: #fff;
+        &:hover, &:active, &:focus {
+            color: #fff;
+        }
+    }
+}
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .news__item-date {
+        font-size: 18px;
+    }
+    .news__item-title {
+        h3 {
+            font-size: 16px;
+        }
+    }
+    .news__item-text {
+        font-size: 14px;
+    }
+    .news__item-link {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .news__item-img {
+        img {
+            float: none;
+            margin: 0 0 20px 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}
